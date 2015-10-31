@@ -1,7 +1,7 @@
 module.exports = {
 
   output: {
-    library: 'expect',
+    library: 'expectDOM',
     libraryTarget: 'umd'
   },
 

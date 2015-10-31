@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "babel ./modules -d lib --stage 0 --loose all --ignore '__tests__'",
-    "build-umd": "NODE_ENV=production webpack modules/index.js umd/expect.js",
-    "build-min": "NODE_ENV=production webpack -p modules/index.js umd/expect.min.js",
+    "build-umd": "NODE_ENV=production webpack modules/index.js umd/expect-dom.js",
+    "build-min": "NODE_ENV=production webpack -p modules/index.js umd/expect-dom.min.js",
     "lint": "eslint modules",
     "test": "npm run lint && karma start",
     "postinstall": "node ./npm-scripts/postinstall.js"

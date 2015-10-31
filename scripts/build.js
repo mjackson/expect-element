@@ -13,6 +13,6 @@ exec('npm run build-min')
 
 console.log(
   '\ngzipped, the UMD build is ' + prettyBytes(
-    gzipSize.sync(readFileSync('umd/expect.min.js'))
+    gzipSize.sync(readFileSync('umd/expect-dom.min.js'))
   )
 )
