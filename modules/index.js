@@ -76,9 +76,42 @@ export function toNotHaveAttributes(attributes) {
       toNotHaveAttribute.call(this, property, attributes[property])
 }
 
+export function toHaveText(text) {
+  assert(
+    isDOMNode(this.actual),
+    'The "actual" argument in expect(actual).toHaveText() must be a DOM node, %s was given',
+    this.actual
+  )
+
+  assert(
+    this.actual.textContent === text,
+    'Expected %s to have %s text, but had %s instead',
+    this.actual,
+    text,
+    this.actual.textContent
+  )
+}
+
+export function toNotHaveText(text) {
+  assert(
+    isDOMNode(this.actual),
+    'The "actual" argument in expect(actual).toHaveText() must be a DOM node, %s was given',
+    this.actual
+  )
+
+  assert(
+    this.actual.textContent !== text,
+    'Expected %s to not have %s text',
+    this.actual,
+    text
+  )
+}
+
 export default {
   toHaveAttribute,
   toHaveAttributes,
   toNotHaveAttribute,
-  toNotHaveAttributes
+  toNotHaveAttributes,
+  toHaveText,
+  toNotHaveText
 }
