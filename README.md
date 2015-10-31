@@ -1,9 +1,9 @@
-# expect
+# expect-dom
 
 [![build status](https://img.shields.io/travis/mjackson/expect-dom/master.svg?style=flat-square)](https://travis-ci.org/mjackson/expect-dom)
 [![npm package](https://img.shields.io/npm/v/expect-dom.svg?style=flat-square)](https://www.npmjs.org/package/expect-dom)
 
-[expect-dom](https://github.com/mjackson/expect-dom) lets you write [expect](https://github.com/mjackson/expect)-style assertions for DOM nodes.
+[expect-dom](https://github.com/mjackson/expect-dom) is an extension to [expect](https://github.com/mjackson/expect) that lets you write assertions for DOM nodes.
 
 ## Installation
 
@@ -104,15 +104,3 @@ expect(node).toNotHaveText('hello world')
 ## Issues
 
 Please file issues on the [issue tracker on GitHub](https://github.com/mjackson/expect-dom/issues).
-
-## Tests
-
-To run the tests in node:
-
-    $ npm install
-    $ npm test
-
-To run the tests in Chrome:
-
-    $ npm install
-    $ npm run test-browser
