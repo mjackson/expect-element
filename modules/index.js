@@ -1,24 +1,24 @@
 import { assert } from 'expect'
 import { isDOMNode } from './TestUtils'
 
-export function toHaveAttribute(name, value) {
+export function toHaveAttribute(name, value, message) {
   assert(
     isDOMNode(this.actual),
     'The "actual" argument in expect(actual).toHaveAttribute() must be a DOM node, %s was given',
     this.actual
   )
 
-  if (value === undefined) {
+  if (value == null) {
     assert(
       this.actual.getAttribute(name),
-      'Expected %s to have a %s attribute, but it did not',
+      (message || 'Expected %s to have a %s attribute, but it did not'),
       this.actual,
       name
     )
   } else {
     assert(
       this.actual.getAttribute(name) === value,
-      'Expected %s to have a %s attribute of %s, but it was %s',
+      (message || 'Expected %s to have a %s attribute of %s, but it was %s'),
       this.actual,
       name,
       value,
@@ -27,7 +27,32 @@ export function toHaveAttribute(name, value) {
   }
 }
 
-export function toHaveAttributes(attributes) {
+export function toNotHaveAttribute(name, value, message) {
+  assert(
+    isDOMNode(this.actual),
+    'The "actual" argument in expect(actual).toNotHaveAttribute() must be a DOM node, %s was given',
+    this.actual
+  )
+
+  if (value == null) {
+    assert(
+      this.actual.getAttribute(name) == null,
+      (message || 'Expected %s to not have a %s attribute, but it did'),
+      this.actual,
+      name
+    )
+  } else {
+    assert(
+      this.actual.getAttribute(name) !== value,
+      (message || 'Expected %s to not have a %s attribute of %s'),
+      this.actual,
+      name,
+      value
+    )
+  }
+}
+
+export function toHaveAttributes(attributes, message) {
   assert(
     isDOMNode(this.actual),
     'The "actual" argument in expect(actual).toHaveAttributes() must be a DOM node, %s was given',
@@ -36,35 +61,10 @@ export function toHaveAttributes(attributes) {
 
   for (const property in attributes)
     if (attributes.hasOwnProperty(property))
-      toHaveAttribute.call(this, property, attributes[property])
+      toHaveAttribute.call(this, property, attributes[property], message)
 }
 
-export function toNotHaveAttribute(name, value) {
-  assert(
-    isDOMNode(this.actual),
-    'The "actual" argument in expect(actual).toNotHaveAttribute() must be a DOM node, %s was given',
-    this.actual
-  )
-
-  if (value === undefined) {
-    assert(
-      this.actual.getAttribute(name) == null,
-      'Expected %s to not have a %s attribute, but it did',
-      this.actual,
-      name
-    )
-  } else {
-    assert(
-      this.actual.getAttribute(name) !== value,
-      'Expected %s to not have a %s attribute of %s',
-      this.actual,
-      name,
-      value
-    )
-  }
-}
-
-export function toNotHaveAttributes(attributes) {
+export function toNotHaveAttributes(attributes, message) {
   assert(
     isDOMNode(this.actual),
     'The "actual" argument in expect(actual).toNotHaveAttributes() must be a DOM node, %s was given',
@@ -73,10 +73,10 @@ export function toNotHaveAttributes(attributes) {
 
   for (const property in attributes)
     if (attributes.hasOwnProperty(property))
-      toNotHaveAttribute.call(this, property, attributes[property])
+      toNotHaveAttribute.call(this, property, attributes[property], message)
 }
 
-export function toHaveText(text) {
+export function toHaveText(text, message) {
   assert(
     isDOMNode(this.actual),
     'The "actual" argument in expect(actual).toHaveText() must be a DOM node, %s was given',
@@ -85,14 +85,14 @@ export function toHaveText(text) {
 
   assert(
     this.actual.textContent === text,
-    'Expected %s to have %s text, but had %s instead',
+    (message || 'Expected %s to have %s text, but had %s instead'),
     this.actual,
     text,
     this.actual.textContent
   )
 }
 
-export function toNotHaveText(text) {
+export function toNotHaveText(text, message) {
   assert(
     isDOMNode(this.actual),
     'The "actual" argument in expect(actual).toHaveText() must be a DOM node, %s was given',
@@ -101,7 +101,7 @@ export function toNotHaveText(text) {
 
   assert(
     this.actual.textContent !== text,
-    'Expected %s to not have %s text',
+    (message || 'Expected %s to not have %s text'),
     this.actual,
     text
   )
