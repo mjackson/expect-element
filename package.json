@@ -1,7 +1,7 @@
 {
   "name": "expect-dom",
   "version": "1.0.0",
-  "description": "Expect assertions for DOM nodes",
+  "description": "Expect-style assertions for DOM nodes",
   "main": "index.js",
   "scripts": {
     "build": "babel ./modules -d lib --stage 0 --loose all --ignore '__tests__'",
