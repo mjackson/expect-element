@@ -44,7 +44,7 @@ expect(node).toHaveAttribute('id')
 expect(node).toHaveAttribute('id', 'an-id')
 ```
 
-#### toNotHaveAttribute
+### toNotHaveAttribute
 
 > `expect(object).toNotHaveAttribute(name, [value, [message]])`
 
@@ -68,7 +68,7 @@ expect(node).toHaveAttributes({
 })
 ```
 
-#### toNotHaveAttributes
+### toNotHaveAttributes
 
 > `expect(node).toNotHaveAttribute(attributes, [message])`
 
