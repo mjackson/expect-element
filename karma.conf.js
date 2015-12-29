@@ -97,7 +97,7 @@ module.exports = function (config) {
         accessKey: process.env.BROWSER_STACK_ACCESS_KEY,
         pollingTimeout: 10000,
         startTunnel: true,
-        project: 'expect',
+        project: 'expect-element',
         build: buildLabel,
         name: process.env.TRAVIS_JOB_NUMBER
       }
