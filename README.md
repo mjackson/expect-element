@@ -1,9 +1,12 @@
-# expect-element
+# expect-element [![Travis][build-badge]][build] [![npm package][npm-badge]][npm]
 
-[![build status](https://img.shields.io/travis/mjackson/expect-element/master.svg?style=flat-square)](https://travis-ci.org/mjackson/expect-element)
-[![npm package](https://img.shields.io/npm/v/expect-element.svg?style=flat-square)](https://www.npmjs.org/package/expect-element)
+[build-badge]: https://img.shields.io/travis/mjackson/expect-element/master.svg?style=flat-square
+[build]: https://travis-ci.org/mjackson/expect-element
 
-[expect-element](https://github.com/mjackson/expect-element) is an extension to [expect](https://github.com/mjackson/expect) that lets you write assertions for DOM elements.
+[npm-badge]: https://img.shields.io/npm/v/expect-element.svg?style=flat-square
+[npm]: https://www.npmjs.org/package/expect-element
+
+[expect-element](https://github.com/mjackson/expect-element) is an extension for [expect](https://github.com/mjackson/expect) that lets you write better assertions for DOM nodes.
 
 ## Installation
 
