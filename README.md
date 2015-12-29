@@ -1,68 +1,68 @@
-# expect-dom
+# expect-element
 
-[![build status](https://img.shields.io/travis/mjackson/expect-dom/master.svg?style=flat-square)](https://travis-ci.org/mjackson/expect-dom)
-[![npm package](https://img.shields.io/npm/v/expect-dom.svg?style=flat-square)](https://www.npmjs.org/package/expect-dom)
+[![build status](https://img.shields.io/travis/mjackson/expect-element/master.svg?style=flat-square)](https://travis-ci.org/mjackson/expect-element)
+[![npm package](https://img.shields.io/npm/v/expect-element.svg?style=flat-square)](https://www.npmjs.org/package/expect-element)
 
-[expect-dom](https://github.com/mjackson/expect-dom) is an extension to [expect](https://github.com/mjackson/expect) that lets you write assertions for DOM nodes.
+[expect-element](https://github.com/mjackson/expect-element) is an extension to [expect](https://github.com/mjackson/expect) that lets you write assertions for DOM elements.
 
 ## Installation
 
 Using [npm](https://www.npmjs.org/):
 
-    $ npm install expect expect-dom
+    $ npm install expect expect-element
 
 Then with a module bundler like [webpack](https://webpack.github.io/), use as you would anything else:
 
 ```js
 // using an ES6 transpiler, like babel
 import expect from 'expect'
-import expectDOM from 'expect-dom'
-expect.extend(expectDOM)
+import expectElement from 'expect-element'
+expect.extend(expectElement)
 
 // not using an ES6 transpiler
 var expect = require('expect')
-var expectDOM = require('expect-dom')
-expect.extend(expectDOM)
+var expectElement = require('expect-element')
+expect.extend(expectElement)
 ```
 
 There is a UMD build in the npm package in the `umd` directory. Use it like:
 
 ```js
-var expect = require('expect-dom/umd/expect-dom.min')
+var expect = require('expect-element/umd/expect-element.min')
 ```
 
 ## Assertions
 
 ### toHaveAttribute
 
-> `expect(node).toHaveAttribute(name, [value, [message]])`
+> `expect(element).toHaveAttribute(name, [value, [message]])`
 
-Asserts the given DOM `node` has an attribute with the given `name`. If `value` is given, asserts the value of the attribute as well.
+Asserts the given DOM `element` has an attribute with the given `name`. If `value` is given, asserts the value of the attribute as well.
 
 ```js
-expect(node).toHaveAttribute('id')
-expect(node).toHaveAttribute('id', 'an-id')
+expect(element).toHaveAttribute('id')
+expect(element).toHaveAttribute('id', 'an-id')
 ```
 
 ### toNotHaveAttribute
 
 > `expect(object).toNotHaveAttribute(name, [value, [message]])`
 
-Asserts the given DOM `node` does not have an attribute with the given `name`. If `value` is given, asserts the value of the attribute as well.
+Asserts the given DOM `element` does not have an attribute with the given `name`. If `value` is given, asserts the value of the attribute as well.
 
 ```js
-expect(node).toNotHaveAttribute('id')
-expect(node).toNotHaveAttribute('id', 'an-id')
+expect(element).toNotHaveAttribute('id')
+expect(element).toNotHaveAttribute('id', 'an-id')
 ```
 
 ### toHaveAttributes
 
-> `expect(node).toHaveAttribute(attributes, [message])`
+> `expect(element).toHaveAttribute(attributes, [message])`
 
-Asserts the given DOM `node` has attributes with the names and values in `attributes`.
+Asserts the given DOM `element` has attributes with the names and values in `attributes`.
 
 ```js
-expect(node).toHaveAttributes({
+expect(element).toHaveAttributes({
   id: 'an-id',
   'class': 'a-class'
 })
@@ -70,12 +70,12 @@ expect(node).toHaveAttributes({
 
 ### toNotHaveAttributes
 
-> `expect(node).toNotHaveAttribute(attributes, [message])`
+> `expect(element).toNotHaveAttribute(attributes, [message])`
 
-Asserts the given DOM `node` does not have attributes with the names and values in `attributes`.
+Asserts the given DOM `element` does not have attributes with the names and values in `attributes`.
 
 ```js
-expect(node).toNotHaveAttributes({
+expect(element).toNotHaveAttributes({
   id: 'an-id',
   'class': 'a-class'
 })
@@ -83,24 +83,24 @@ expect(node).toNotHaveAttributes({
 
 ### toHaveText
 
-> `expect(node).toHaveText(text, [message])`
+> `expect(element).toHaveText(text, [message])`
 
-Asserts the `textContent` of the given DOM `node` is `text`.
+Asserts the `textContent` of the given DOM `element` is `text`.
 
 ```js
-expect(node).toHaveText('hello world')
+expect(element).toHaveText('hello world')
 ```
 
 ### toNotHaveText
 
-> `expect(node).toNotHaveText(text, [message])`
+> `expect(element).toNotHaveText(text, [message])`
 
-Asserts the `textContent` of the given DOM `node` is not `text`.
+Asserts the `textContent` of the given DOM `element` is not `text`.
 
 ```js
-expect(node).toNotHaveText('hello world')
+expect(element).toNotHaveText('hello world')
 ```
 
 ## Issues
 
-Please file issues on the [issue tracker on GitHub](https://github.com/mjackson/expect-dom/issues).
+Please file issues on the [issue tracker on GitHub](https://github.com/mjackson/expect-element/issues).

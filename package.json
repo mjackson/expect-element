@@ -1,12 +1,12 @@
 {
-  "name": "expect-dom",
+  "name": "expect-element",
   "version": "1.0.0",
   "description": "Expect-style assertions for DOM nodes",
   "main": "index.js",
   "scripts": {
     "build": "babel ./modules -d lib --stage 0 --loose all --ignore '__tests__'",
-    "build-umd": "NODE_ENV=production webpack modules/index.js umd/expect-dom.js",
-    "build-min": "NODE_ENV=production webpack -p modules/index.js umd/expect-dom.min.js",
+    "build-umd": "NODE_ENV=production webpack modules/index.js umd/expect-element.js",
+    "build-min": "NODE_ENV=production webpack -p modules/index.js umd/expect-element.min.js",
     "lint": "eslint modules",
     "test": "npm run lint && karma start",
     "postinstall": "node ./npm-scripts/postinstall.js"
@@ -14,12 +14,12 @@
   "author": "Michael Jackson",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mjackson/expect-dom.git"
+    "url": "git://github.com/mjackson/expect-element.git"
   },
   "bugs": {
-    "url": "https://github.com/mjackson/expect-dom/issues"
+    "url": "https://github.com/mjackson/expect-element/issues"
   },
-  "homepage": "https://github.com/mjackson/expect-dom",
+  "homepage": "https://github.com/mjackson/expect-element",
   "license": "MIT",
   "peerDependencies": {
     "expect": "^1.12.2"
