@@ -12,9 +12,9 @@
 
 Using [npm](https://www.npmjs.org/):
 
-    $ npm install expect expect-element
+    $ npm install --save expect expect-element
 
-Then with a module bundler like [webpack](https://webpack.github.io/), use as you would anything else:
+Then, use as you would anything else:
 
 ```js
 // using an ES6 transpiler, like babel
@@ -28,11 +28,13 @@ var expectElement = require('expect-element')
 expect.extend(expectElement)
 ```
 
-There is a UMD build in the npm package in the `umd` directory. Use it like:
+The UMD build is also available on [npmcdn](https://npmcdn.com):
 
-```js
-var expect = require('expect-element/umd/expect-element.min')
+```html
+<script src="https://npmcdn.com/expect-element/umd/expect-element.min.js"></script>
 ```
+
+You can find the library on `window.expectElement`.
 
 ## Assertions
 
@@ -103,7 +105,3 @@ Asserts the `textContent` of the given DOM `element` is not `text`.
 ```js
 expect(element).toNotHaveText('hello world')
 ```
-
-## Issues
-
-Please file issues on the [issue tracker on GitHub](https://github.com/mjackson/expect-element/issues).
