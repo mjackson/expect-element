@@ -12,7 +12,8 @@
     "build-min": "webpack -p modules/index.js umd/expect-element.min.js",
     "lint": "eslint modules",
     "test": "npm run lint && karma start",
-    "release": "node ./scripts/release.js"
+    "release": "node ./scripts/release.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,7 @@
   },
   "homepage": "https://github.com/mjackson/expect-element",
   "peerDependencies": {
-    "expect": "^1.15.0"
+    "expect": "^1.15.1"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
