@@ -4,13 +4,15 @@
   "description": "Expect-style assertions for DOM nodes",
   "author": "Michael Jackson",
   "license": "MIT",
-  "main": "index.js",
+  "main": "lib",
   "scripts": {
-    "build": "babel ./modules -d lib --stage 0 --loose all --ignore '__tests__'",
-    "build-umd": "NODE_ENV=production webpack modules/index.js umd/expect-element.js",
-    "build-min": "NODE_ENV=production webpack -p modules/index.js umd/expect-element.min.js",
+    "build": "node ./scripts/build.js",
+    "build-cjs": "babel ./modules -d lib --stage 0 --loose all --ignore '__tests__'",
+    "build-umd": "webpack modules/index.js umd/expect-element.js",
+    "build-min": "webpack -p modules/index.js umd/expect-element.min.js",
     "lint": "eslint modules",
-    "test": "npm run lint && karma start"
+    "test": "npm run lint && karma start",
+    "release": "node ./scripts/release.js"
   },
   "repository": {
     "type": "git",
@@ -37,6 +39,7 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^2.0.1",
     "pretty-bytes": "^2.0.1",
+    "readline-sync": "^1.4.1",
     "webpack": "^1.4.13"
   },
   "keywords": [
