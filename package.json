@@ -1,7 +1,7 @@
 {
   "name": "expect-element",
   "version": "1.0.0",
-  "description": "Expect-style assertions for DOM nodes",
+  "description": "Write better assertions for DOM nodes",
   "author": "Michael Jackson",
   "license": "MIT",
   "main": "lib",
