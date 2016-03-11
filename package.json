@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/mjackson/expect-element",
   "peerDependencies": {
-    "expect": "^1.12.2"
+    "expect": "^1.15.0"
   },
   "devDependencies": {
     "babel-cli": "^6.6.5",
