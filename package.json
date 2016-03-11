@@ -5,6 +5,11 @@
   "author": "Michael Jackson",
   "license": "MIT",
   "main": "lib",
+  "browser": "umd/expect-element.min.js",
+  "files": [
+    "lib",
+    "umd"
+  ],
   "scripts": {
     "build": "node ./scripts/build.js",
     "build-cjs": "babel ./modules -d lib --ignore '__tests__'",
