@@ -17,12 +17,12 @@ Using [npm](https://www.npmjs.org/):
 Then, use as you would anything else:
 
 ```js
-// using an ES6 transpiler, like babel
+// using ES6 modules
 import expect from 'expect'
 import expectElement from 'expect-element'
 expect.extend(expectElement)
 
-// not using an ES6 transpiler
+// using CommonJS modules
 var expect = require('expect')
 var expectElement = require('expect-element')
 expect.extend(expectElement)
