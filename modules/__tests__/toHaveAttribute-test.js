@@ -1,9 +1,9 @@
 import expect from 'expect'
-import expectDOM from '../index'
+import expectElement from '../index'
 
 describe('toHaveAttribute', () => {
   before(() => {
-    expect.extend(expectDOM)
+    expect.extend(expectElement)
   })
 
   let node

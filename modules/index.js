@@ -1,7 +1,7 @@
 import { assert } from 'expect'
 import { isDOMNode } from './TestUtils'
 
-export const toHaveAttribute = (name, value, message) => {
+export function toHaveAttribute(name, value, message) {
   assert(
     isDOMNode(this.actual),
     'The "actual" argument in expect(actual).toHaveAttribute() must be a DOM node, %s was given',
@@ -27,7 +27,7 @@ export const toHaveAttribute = (name, value, message) => {
   }
 }
 
-export const toNotHaveAttribute = (name, value, message) => {
+export function toNotHaveAttribute(name, value, message) {
   assert(
     isDOMNode(this.actual),
     'The "actual" argument in expect(actual).toNotHaveAttribute() must be a DOM node, %s was given',
@@ -52,7 +52,7 @@ export const toNotHaveAttribute = (name, value, message) => {
   }
 }
 
-export const toHaveAttributes = (attributes, message) => {
+export function toHaveAttributes(attributes, message) {
   assert(
     isDOMNode(this.actual),
     'The "actual" argument in expect(actual).toHaveAttributes() must be a DOM node, %s was given',
@@ -64,7 +64,7 @@ export const toHaveAttributes = (attributes, message) => {
       toHaveAttribute.call(this, property, attributes[property], message)
 }
 
-export const toNotHaveAttributes = (attributes, message) => {
+export function toNotHaveAttributes(attributes, message) {
   assert(
     isDOMNode(this.actual),
     'The "actual" argument in expect(actual).toNotHaveAttributes() must be a DOM node, %s was given',
@@ -76,7 +76,7 @@ export const toNotHaveAttributes = (attributes, message) => {
       toNotHaveAttribute.call(this, property, attributes[property], message)
 }
 
-export const toHaveText = (text, message) => {
+export function toHaveText(text, message) {
   assert(
     isDOMNode(this.actual),
     'The "actual" argument in expect(actual).toHaveText() must be a DOM node, %s was given',
@@ -92,7 +92,7 @@ export const toHaveText = (text, message) => {
   )
 }
 
-export const toNotHaveText = (text, message) => {
+export function toNotHaveText(text, message) {
   assert(
     isDOMNode(this.actual),
     'The "actual" argument in expect(actual).toHaveText() must be a DOM node, %s was given',
