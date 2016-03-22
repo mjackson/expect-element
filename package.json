@@ -56,5 +56,10 @@
     "test",
     "spec",
     "dom"
-  ]
+  ],
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
 }
