@@ -6,6 +6,7 @@
     "comma-dangle": [2, "never"],
     "curly": 0,
     "max-len": 0,
+    "no-restricted-syntax": 0,
     "semi": [2, "never"]
   }
 }
