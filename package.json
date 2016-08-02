@@ -2,6 +2,7 @@
   "name": "expect-element",
   "version": "1.1.1",
   "description": "Write better assertions for DOM nodes",
+  "repository": "mjackson/expect-element",
   "author": "Michael Jackson",
   "license": "MIT",
   "main": "lib",
@@ -53,10 +54,6 @@
     "spec",
     "dom"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/mjackson/expect-element.git"
-  },
   "babel": {
     "presets": [
       "es2015"
