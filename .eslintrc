@@ -1,12 +1,19 @@
 {
-  "extends": "airbnb",
   "parser": "babel-eslint",
+  "plugins": [
+    "import"
+  ],
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors"
+  ],
   "rules": {
-    "eqeqeq": [2, "smart"],
-    "comma-dangle": [2, "never"],
-    "curly": 0,
-    "max-len": 0,
-    "no-restricted-syntax": 0,
-    "semi": [2, "never"]
+    "array-bracket-spacing": [ 2, "always" ],
+    "semi": [ 2, "never" ]
   }
 }
