@@ -28,10 +28,10 @@ var expectElement = require('expect-element')
 expect.extend(expectElement)
 ```
 
-The UMD build is also available on [npmcdn](https://npmcdn.com):
+The UMD build is also available on [unpkg](https://unpkg.com):
 
 ```html
-<script src="https://npmcdn.com/expect-element/umd/expect-element.min.js"></script>
+<script src="https://unpkg.com/expect-element/umd/expect-element.min.js"></script>
 ```
 
 You can find the library on `window.expectElement`.
