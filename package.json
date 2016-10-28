@@ -41,7 +41,7 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^3.0.2",
     "pretty-bytes": "^3.0.1",
-    "readline-sync": "^1.4.1",
+    "readline-sync": "^1.4.5",
     "webpack": "^1.4.13"
   },
   "keywords": [
