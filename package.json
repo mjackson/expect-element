@@ -42,7 +42,7 @@
     "mocha": "^3.0.2",
     "pretty-bytes": "^3.0.1",
     "readline-sync": "^1.4.1",
-    "webpack": "^1.4.13"
+    "webpack": "^2.4.1"
   },
   "keywords": [
     "expect",
